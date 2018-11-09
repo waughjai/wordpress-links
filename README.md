@@ -1,4 +1,4 @@
-=== WAJ Links ===
+# WAJ Links
 Contributors: waughjai
 Tags: link, html, auto-generate
 Requires at least: 4.9.8
@@ -11,11 +11,11 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Way to mo'-easily create links o' various types in content through PHP & shortcodes.
 
 
-== Description ==
+## Description
 
 This plugin includes 6 types o' shortcodes / PHP classes:
 
-=== Link ===
+### Link
 
 Shortcode: [link href="url"]content[/link]
 PHP Class: new WaughJ\HTMLLink\HTMLLink( $href, $content, $other_attributes );
@@ -30,7 +30,7 @@ Valid attributes include all valid HTML5 attributes for the a tag, as well as...
 * an "external" attribute, which, when set to "true", automatically adds HTML to make the link open in a new tab & protect it from hacking. ( See https://www.jitbit.com/alexblog/256-targetblank---the-most-underestimated-vulnerability-ever/ for mo' info on security concerns ).
 
 
-=== Mail-Link ===
+### Mail-Link
 
 Shortcode: [mail-link]email[/mail-link] or [mail-link email="email"]Email Me.[/mail-link]
 PHP Class: new WaughJ\HTMLMailLink\HTMLMailLink( $email, $other_attributes );
@@ -40,7 +40,7 @@ Generates mailto link. If just email given, content automatically set to email.
 Valid attributes include "value" for content ( for the direct PHP use ). all valid HTML5 attributes for the a tag, as well as the external attribute mentioned under Link.
 
 
-=== Post-Link ===
+### Post-Link
 
 Shortcode: [post-link slug="post-slug"] or [post-link slug="post-slug" post_type="specific-post-type"] [post-link post_id="post-id"]Read this post[/post-link]
 PHP Class: new WaughJ\WPPostLink\WPPostLink( $attributes );
@@ -50,7 +50,7 @@ Generates a link to a post, based on slug or post_id, or, if using the PHP class
 In addition, you can add all the attributes you can for the regular Link class & shortcode.
 
 
-=== Home-Link ===
+### Home-Link
 
 Shortcode: [home-link] or [home-link]Visit our home page.[/home-link]
 PHP Class: new WaughJ\WPHomeLink\WPHomeLink( $attributes );
@@ -58,7 +58,7 @@ PHP Class: new WaughJ\WPHomeLink\WPHomeLink( $attributes );
 Automatically generates link to WordPress front page. Content that represents link defaults to name o' front page. All alternative attributes done the same as regular Link class & shortcode.
 
 
-=== Category Link ===
+### Category Link
 
 Shortcode: [category-link slug="category-slug"] or [category-link category_id="category-id"]Link content[/category-link]
 PHP Class: new WaughJ\WPCategoryLink\WPCategoryLink( $attributes );
@@ -66,7 +66,7 @@ PHP Class: new WaughJ\WPCategoryLink\WPCategoryLink( $attributes );
 Automatically generates link to category page. Use slug or category_id attributes to get category. Content & optional attributes added the same way as regular Link class.
 
 
-=== Tag Link ===
+### Tag Link
 
 Shortcode: [tag-link slug="category-slug"] or [tag-link slug="category-slug"]Link content[/tag-link]
 PHP Class: new WaughJ\WPTagLink\WPTagLink( $attributes );
@@ -74,14 +74,14 @@ PHP Class: new WaughJ\WPTagLink\WPTagLink( $attributes );
 Automatically generates link to tag page. Use slug to get tag. Content & optional attributes added the same way as regular Link class.
 
 
-== Installation ==
+## Installation
 
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. Links can be added using shortcode in WordPress editors or directly in PHP by using instances o' classes. Instances o' classes can be automatically casted into strings & used as strings, or you can call getHTML() to get HTML code as string.
 
 
-== Changelog ==
+## Changelog
 
 = 1.0 =
 * Initial stable version.
