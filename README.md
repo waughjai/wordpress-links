@@ -1,12 +1,12 @@
-# WAJ Links
-Contributors: waughjai
-Tags: link, html, auto-generate
-Requires at least: 4.9.8
-Tested up to: 4.9.8
-Stable tag: 1.0.0
-Requires PHP: 7.0
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# WAJ Links WordPress Plugin
+* Contributors: waughjai
+* Tags: link, html, auto-generate
+* Requires at least: 4.9.8
+* Tested up to: 4.9.8
+* Stable tag: 1.0.0
+* Requires PHP: 7.0
+* License: GPLv2 or later
+* License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Way to mo'-easily create links o' various types in content through PHP & shortcodes.
 
