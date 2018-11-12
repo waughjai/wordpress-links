@@ -12,11 +12,11 @@
     "type": "library",
     "require": {
 		"php": ">=7.0",
-		"waughj/html-link": ">=1.2.2",
-		"waughj/html-mail-link": "*",
-		"waughj/wp-category-link": ">=0.1.1",
-		"waughj/wp-home-link": ">=0.1.1",
-		"waughj/wp-post-link": ">=0.2.2",
-		"waughj/wp-tag-link": ">=0.1.1"
+		"waughj/html-link": ">=1.2.3",
+		"waughj/html-mail-link": "0.1.1",
+		"waughj/wp-category-link": ">=0.1.2",
+		"waughj/wp-home-link": ">=0.1.2",
+		"waughj/wp-post-link": ">=0.2.3",
+		"waughj/wp-tag-link": ">=0.1.2"
     }
 }
