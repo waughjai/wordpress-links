@@ -3,7 +3,7 @@
 	Plugin Name:  WAJ Links
 	Plugin URI:   https://github.com/waughjai/copyright-year
 	Description:  Simple plugin for easy generation o' link HTML for various types o' links.
-	Version:      1.0.0
+	Version:      1.1.0
 	Author:       Jaimeson Waugh
 	Author URI:   https://www.jaimeson-waugh.com
 	License:      GPL2
@@ -20,6 +20,7 @@
 	use WaughJ\WPCategoryLink\WPCategoryLink;
 	use WaughJ\WPTagLink\WPTagLink;
 	use WaughJ\WPHomeLink\WPHomeLink;
+	use WaughJ\WPPhoneLink\WPPhoneLink;
 
 	add_shortcode
 	(
@@ -39,6 +40,10 @@
 		function ( array $atts, $content )
 		{
 			$email = ( $content ) ? do_shortcode( $content ) : TestHashItemString( $atts, 'email', '' );
+			if ( $content )
+			{
+				$atts[ "value" ] = $content;
+			}
 			unset( $atts[ 'email' ] );
 			return ( string )( new HTMLMailLink( $email, $atts ) );
 		}
@@ -93,5 +98,20 @@
 				$atts[ "value" ] = do_shortcode( $content );
 			}
 			return ( string )( new WPHomeLink( $atts ) );
+		}
+	);
+
+	add_shortcode
+	(
+		'phone-link',
+		function ( array $atts, $content )
+		{
+			$phone = ( $content ) ? do_shortcode( $content ) : TestHashItemString( $atts, 'phone', '' );
+			if ( $content )
+			{
+				$atts[ "value" ] = $content;
+			}
+			unset( $atts[ 'phone' ] );
+			return ( string )( new HTMLPhoneLink( $phone, $atts ) );
 		}
 	);

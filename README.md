@@ -40,6 +40,16 @@ Generates mailto link. If just email given, content automatically set to email.
 Valid attributes include "value" for content ( for the direct PHP use ). all valid HTML5 attributes for the a tag, as well as the external attribute mentioned under Link.
 
 
+### Phone-Link
+
+Shortcode: [phone-link]phone number[/phone-link] or [phone-link tel="phone"]Call us now![/phone-link]
+PHP Class: new WaughJ\HTMLPhoneLink\HTMLPhoneLink( $phone_number, $other_attributes );
+
+Generates tel link. If just phone # is given, content automatically set to phone #.
+
+Valid attributes include "value" for content ( for the direct PHP use ). all valid HTML5 attributes for the a tag, as well as the external attribute mentioned under Link.
+
+
 ### Post-Link
 
 Shortcode: [post-link slug="post-slug"] or [post-link slug="post-slug" post_type="specific-post-type"] [post-link post_id="post-id"]Read this post[/post-link]
