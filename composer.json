@@ -18,6 +18,7 @@
 		"waughj/wp-home-link": ">=0.1.2",
 		"waughj/wp-post-link": ">=0.2.3",
 		"waughj/wp-tag-link": ">=0.1.2",
-		"waughj/html-phone-link": "*"
+		"waughj/html-phone-link": "*",
+        "waughj/wp-media-link": ">=0.2.0"
     }
 }
