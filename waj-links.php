@@ -3,7 +3,7 @@
 	Plugin Name:  WAJ Links
 	Plugin URI:   https://github.com/waughjai/copyright-year
 	Description:  Simple plugin for easy generation o' link HTML for various types o' links.
-	Version:      1.2.0
+	Version:      1.2.1
 	Author:       Jaimeson Waugh
 	Author URI:   https://www.jaimeson-waugh.com
 	License:      GPL2
