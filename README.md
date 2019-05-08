@@ -3,7 +3,7 @@
 * Tags: link, html, auto-generate
 * Requires at least: 4.9.8
 * Tested up to: 5.2
-* Stable tag: 1.2.1
+* Stable tag: 1.3.0
 * Requires PHP: 7.0
 * License: GPLv2 or later
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -84,6 +84,16 @@ PHP Class: new WaughJ\WPTagLink\WPTagLink( $attributes );
 Automatically generates link to tag page. Use slug to get tag. Content & optional attributes added the same way as regular Link class.
 
 
+### Media Link
+
+Shortcode: [media-link media_id=""]Link content[/media-link] or [media-link media-id=""]Link content[/media-link] or [media-link media-id="" value="Link content"]
+PHP Class: new WaughJ\WPMediaLink\WPMediaLink( $id, $content, $attributes );
+
+Automatically generates link to media item. Content must be set or shortcode won't work. Shortcode content can be put as content, too. For example, if WAJ Images is installed, you can do the common technique o' an image link with:
+
+[media-link media-id="1"][upload-image id="1"][/media-link]
+
+
 ## Installation
 
 1. Upload the plugin files to the `/wp-content/plugins/plugin-name` directory, or install the plugin through the WordPress plugins screen directly.
@@ -92,6 +102,12 @@ Automatically generates link to tag page. Use slug to get tag. Content & optiona
 
 
 ## Changelog
+
+### 1.3
+* Make shortcodes safely break.
+* Fix mail & phone links so that content doesn't take priority o'er email/phone attributes, causing [mail-link email="waughjai@gmail.com"]Mail Me![/mail-link] to generate <a href="mailto:Mail Me!">Mail Me!</a> 'stead o' the preferred <a href="mailto:waughjai@gmail.com">Mail Me!</a>.
+* Allow mail link to use "mailto" attribute to set email, as well as "email" & allow phone link to use "tel" attribute to set the phone #, as well as "phone".
+* Change "id" attribute to "media-id" / "media_id" for media link so that the shortcode doesn't block setting the link's ID attribute.
 
 ### 1.2
 * Add media link.
