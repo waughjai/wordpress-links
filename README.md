@@ -1,15 +1,6 @@
-# WAJ Links WordPress Plugin
-* Contributors: waughjai
-* Tags: link, html, auto-generate
-* Requires at least: 4.9.8
-* Tested up to: 5.2
-* Stable tag: 1.3.0
-* Requires PHP: 7.0
-* License: GPLv2 or later
-* License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# WordPress Links
 
 Way to mo'-easily create links o' various types in content through PHP & shortcodes.
-
 
 ## Description
 
@@ -102,18 +93,6 @@ Automatically generates link to media item. Content must be set or shortcode won
 
 
 ## Changelog
-
-### 1.3
-* Make shortcodes safely break.
-* Fix mail & phone links so that content doesn't take priority o'er email/phone attributes, causing [mail-link email="waughjai@gmail.com"]Mail Me![/mail-link] to generate <a href="mailto:Mail Me!">Mail Me!</a> 'stead o' the preferred <a href="mailto:waughjai@gmail.com">Mail Me!</a>.
-* Allow mail link to use "mailto" attribute to set email, as well as "email" & allow phone link to use "tel" attribute to set the phone #, as well as "phone".
-* Change "id" attribute to "media-id" / "media_id" for media link so that the shortcode doesn't block setting the link's ID attribute.
-
-### 1.2
-* Add media link.
-
-### 1.1
-* Add phone link.
 
 ### 1.0
 * Initial stable version.

@@ -1,10 +1,9 @@
 <?php
 
 require_once( 'MockWordPress.php' );
-require_once( 'waj-links.php' );
 use PHPUnit\Framework\TestCase;
 
-class WAJLinksTest extends TestCase
+class WordPressLinksTest extends TestCase
 {
 	public function testLink()
 	{
