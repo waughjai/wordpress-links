@@ -94,5 +94,8 @@ Automatically generates link to media item. Content must be set or shortcode won
 
 ## Changelog
 
-### 1.0
+### 1.0.1
+* Update TestHashItem dependency
+
+### 1.0.1
 * Initial stable version.

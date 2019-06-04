@@ -11,15 +11,15 @@
     ],
     "type": "library",
     "require": {
-		"php": ">=7.0",
-		"waughj/html-link": ">=1.2.3",
-		"waughj/html-mail-link": ">=0.1.1",
-		"waughj/wp-category-link": ">=0.1.2",
-		"waughj/wp-home-link": ">=0.1.2",
-		"waughj/wp-post-link": ">=0.2.3",
-		"waughj/wp-tag-link": ">=0.1.2",
-		"waughj/html-phone-link": "*",
-        "waughj/wp-media-link": ">=0.2.0"
+		"php": ">=7.2",
+		"waughj/html-link": ">=1.2.7",
+		"waughj/html-mail-link": ">=0.1.5",
+		"waughj/wp-category-link": ">=0.1.6",
+		"waughj/wp-home-link": ">=0.1.7",
+		"waughj/wp-post-link": ">=0.2.7",
+		"waughj/wp-tag-link": ">=0.1.6",
+		"waughj/html-phone-link": ">=0.1.1",
+        "waughj/wp-media-link": ">=0.2.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.1"

@@ -1,6 +1,7 @@
 <?php
 
 require_once( 'MockWordPress.php' );
+require_once( 'src/WordPressLinks.php' );
 use PHPUnit\Framework\TestCase;
 
 class WordPressLinksTest extends TestCase
@@ -86,7 +87,7 @@ class WordPressLinksTest extends TestCase
 
 	public function testHomeLink()
 	{
-        $this->assertEquals( '<a href="https://www.jaimeson-waugh.com">Jaimeson Waugh</a>', do_shortcode( '[home-link]' ) );
+        $this->assertEquals( '<a href="https://www.jaimeson-waugh.com">Home</a>', do_shortcode( '[home-link]' ) );
         $this->assertEquals( '<a href="https://www.jaimeson-waugh.com">My Site</a>', do_shortcode( '[home-link]My Site[/home-link]' ) );
         $this->assertEquals( '<a href="https://www.jaimeson-waugh.com">My Site</a>', do_shortcode( '[home-link value="My Site"]' ) );
 	}

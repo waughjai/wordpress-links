@@ -3,16 +3,15 @@
 declare( strict_types = 1 );
 namespace WaughJ\WordPressLinks;
 
-use function WaughJ\TestHashItem\TestHashItemString;
-use function WaughJ\TestHashItem\TestHashItemExists;
 use WaughJ\HTMLLink\HTMLLink;
 use WaughJ\HTMLMailLink\HTMLMailLink;
-use WaughJ\WPPostLink\WPPostLink;
-use WaughJ\WPCategoryLink\WPCategoryLink;
-use WaughJ\WPTagLink\WPTagLink;
-use WaughJ\WPHomeLink\WPHomeLink;
 use WaughJ\HTMLPhoneLink\HTMLPhoneLink;
+use WaughJ\TestHashItem\TestHashItem;
+use WaughJ\WPCategoryLink\WPCategoryLink;
+use WaughJ\WPHomeLink\WPHomeLink;
 use WaughJ\WPMediaLink\WPMediaLink;
+use WaughJ\WPPostLink\WPPostLink;
+use WaughJ\WPTagLink\WPTagLink;
 
 add_shortcode
 (
@@ -20,8 +19,8 @@ add_shortcode
 	function ( $atts, $content )
 	{
 		$atts = makeEmptyArrayIfNotArray( $atts );
-		$href = TestHashItemString( $atts, 'href', $content );
-		$content = ( $content ) ? do_shortcode( $content ) : TestHashItemString( $atts, 'value', $href );
+		$href = TestHashItem::getString( $atts, 'href', $content );
+		$content = ( $content ) ? do_shortcode( $content ) : TestHashItem::getString( $atts, 'value', $href );
 		unset( $atts[ 'href' ], $atts[ 'value' ] );
 		return ( !empty( $href ) ) ? ( string )( new HTMLLink( $href, $content, $atts ) ) : '';
 	}
@@ -33,7 +32,7 @@ add_shortcode
 	function ( $atts, $content )
 	{
 		$atts = makeEmptyArrayIfNotArray( $atts );
-		$email = TestHashItemString( $atts, 'email', TestHashItemString( $atts, 'mailto', $content ) );
+		$email = TestHashItem::getString( $atts, 'email', TestHashItem::getString( $atts, 'mailto', $content ) );
 		if ( $content )
 		{
 			$atts[ "value" ] = $content;
@@ -108,7 +107,7 @@ add_shortcode
 	function ( $atts, $content )
 	{
 		$atts = makeEmptyArrayIfNotArray( $atts );
-		$phone = TestHashItemString( $atts, 'phone', TestHashItemString( $atts, 'tel', $content ) );
+		$phone = TestHashItem::getString( $atts, 'phone', TestHashItem::getString( $atts, 'tel', $content ) );
 		if ( $content )
 		{
 			$atts[ "value" ] = $content;
@@ -124,8 +123,8 @@ add_shortcode
 	function ( $atts, $content )
 	{
 		$atts = makeEmptyArrayIfNotArray( $atts );
-		$id = TestHashItemExists( $atts, 'media_id', TestHashItemExists( $atts, 'media-id', '' ) );
-		$content = ( $content ) ? do_shortcode( $content ) : TestHashItemString( $atts, 'value', null );
+		$id = $atts[ 'media_id' ] ?? $atts[ 'media-id' ] ?? '';
+		$content = ( $content ) ? do_shortcode( $content ) : TestHashItem::getString( $atts, 'value', null );
 		unset( $atts[ 'id' ], $atts[ 'value' ] );
 		return ( $id !== null && $content !== null ) ? ( string )( new WPMediaLink( $id, $content, $atts ) ) : '';
 	}
