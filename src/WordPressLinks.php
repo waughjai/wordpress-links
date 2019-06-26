@@ -126,7 +126,7 @@ add_shortcode
 		$id = $atts[ 'media_id' ] ?? $atts[ 'media-id' ] ?? '';
 		$content = ( $content ) ? do_shortcode( $content ) : TestHashItem::getString( $atts, 'value', null );
 		unset( $atts[ 'id' ], $atts[ 'value' ] );
-		return ( $id !== null && $content !== null ) ? ( string )( new WPMediaLink( $id, $content, $atts ) ) : '';
+		return ( $id !== null && $content !== null ) ? ( string )( new WPMediaLink( intval( $id ), $content, $atts ) ) : '';
 	}
 );
 
